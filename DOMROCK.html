@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="DOMROCK.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock');
+    " class="button"
+    ><img src="rock-emoji.png" alt="Rock" class="move-icons"></button>
+
+    <button onclick="
+      playGame('paper');
+    "class="button"
+    ><img src="paper-emoji.png" alt="Paper" class="move-icons"></button>
+
+    <button onclick="
+      playGame('scissors');
+    "class="button"
+    ><img src="scissors-emoji.png" alt="scissors" class="move-icons"></button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="Reset-score">Reset Score</button>
+
+    <script src="DOMROCK.js"></script>
+  </body>
+</html>
